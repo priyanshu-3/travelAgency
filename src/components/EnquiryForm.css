@@ -6,35 +6,40 @@
 .enquiry-form-container {
     max-width: 100%;
     margin: 0 auto;
-    padding: var(--spacing-md);
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(20px);
-    border-radius: var(--radius-lg);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: var(--spacing-lg);
+    background: transparent;
+    backdrop-filter: none;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
 }
 
 .form-header {
     text-align: center;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
 }
 
 .form-header h3 {
     color: var(--text-light);
-    margin-bottom: var(--spacing-xs);
-    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.02em;
 }
 
 .form-header p {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.95rem;
     margin-bottom: 0;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
 }
 
 .enquiry-form {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xs);
+    gap: var(--spacing-md);
 }
 
 /* Compact form inputs for hero */
@@ -43,39 +48,101 @@
 }
 
 .hero-form .form-label {
-    margin-bottom: 0.25rem;
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.375rem;
+    font-size: 0.875rem;
+    color: var(--text-light);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero-form .form-input,
 .hero-form .form-select,
 .hero-form .form-textarea {
-    padding: 0.5rem;
-    font-size: 0.875rem;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.625rem 0.75rem;
+    font-size: 0.9375rem;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: var(--text-light);
+    font-weight: 500;
+    transition: all var(--transition-base);
+}
+
+.hero-form .form-input::placeholder,
+.hero-form .form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+}
+
+.hero-form .form-input:focus,
+.hero-form .form-select:focus,
+.hero-form .form-textarea:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.2);
+}
+
+.hero-form .form-select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='white' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2.5rem;
+}
+
+.hero-form .form-select option {
+    background: var(--forest-dark);
+    color: var(--text-light);
 }
 
 .hero-form .form-textarea {
-    min-height: 60px;
+    min-height: 70px;
+    resize: vertical;
 }
 
 .hero-form .submit-btn {
-    padding: 0.75rem;
-    font-size: 1rem;
-    margin-top: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    font-size: 1.0625rem;
+    margin-top: var(--spacing-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
+    border: none;
+    box-shadow: 0 4px 20px rgba(217, 118, 66, 0.4);
+    transition: all var(--transition-base);
+}
+
+.hero-form .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(217, 118, 66, 0.6);
 }
 
 .hero-form .form-note {
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
+    font-size: 0.8125rem;
+    margin-top: var(--spacing-sm);
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-weight: 500;
 }
 
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
+    align-items: end;
+}
+
+.form-row .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row .form-label {
+    margin-bottom: 0.375rem;
 }
 
 .phone-input-group {
@@ -95,14 +162,26 @@
 .form-input.error,
 .form-select.error,
 .form-textarea.error {
-    border-color: #e74c3c;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+}
+
+.form-error {
+    color: #ff6b6b;
+    font-size: 0.8125rem;
+    margin-top: 0.375rem;
+    display: block;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .char-count {
     text-align: right;
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-top: 0.25rem;
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 0.375rem;
+    font-weight: 500;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .submit-btn {
@@ -122,23 +201,24 @@
 
 .success-message {
     text-align: center;
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-2xl) 0;
     animation: fadeIn 0.5s ease-in;
 }
 
 .success-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto var(--spacing-md);
-    background: linear-gradient(135deg, var(--forest-medium), var(--mountain-medium));
+    width: 70px;
+    height: 70px;
+    margin: 0 auto var(--spacing-lg);
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
     color: var(--text-light);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     animation: scaleIn 0.5s ease-out;
+    box-shadow: 0 4px 20px rgba(217, 118, 66, 0.4);
 }
 
 @keyframes scaleIn {
@@ -154,11 +234,16 @@
 .success-message h4 {
     color: var(--text-light);
     margin-bottom: var(--spacing-sm);
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .success-message p {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.0625rem;
+    font-weight: 500;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Sticky Form on Desktop */

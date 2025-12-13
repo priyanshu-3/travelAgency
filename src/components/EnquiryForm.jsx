@@ -259,7 +259,7 @@ const EnquiryForm = () => {
                         </div>
 
                         <button type="submit" className="btn btn-primary btn-large submit-btn" disabled={isSubmitting}>
-                            {isSubmitting ? 'Submitting...' : 'Send Enquiry'}
+                            {isSubmitting ? 'Planning...' : 'Plan My Adventure'}
                         </button>
 
                         <p className="form-note">

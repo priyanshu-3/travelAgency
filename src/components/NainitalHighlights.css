@@ -32,12 +32,19 @@
 
 @media (max-width: 968px) {
     .nainital-highlights .highlights-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .nainital-highlights .highlights-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .nainital-highlights .highlights-grid {
+        gap: 0.5rem;
     }
 }

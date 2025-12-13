@@ -111,7 +111,8 @@
 }
 
 .hero-form {
-    display: none;
+    display: block;
+    margin-top: var(--spacing-xl);
 }
 
 /* Desktop: Show form on right */
@@ -131,6 +132,7 @@
 
     .hero-form {
         display: block;
+        margin-top: 0;
     }
 }
 
