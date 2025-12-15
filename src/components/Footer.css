@@ -130,6 +130,15 @@
     color: rgba(255, 255, 255, 0.3);
 }
 
+.admin-link {
+    opacity: 0.5;
+    font-size: 0.75rem !important;
+}
+
+.admin-link:hover {
+    opacity: 1;
+}
+
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: 1fr;

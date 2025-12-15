@@ -26,13 +26,14 @@ const Footer = () => {
                             <li><Link to="/itinerary">Itinerary</Link></li>
                             <li><Link to="/safari-booking">Safari Booking</Link></li>
                             <li><a href="#highlights">Highlights</a></li>
+                            <li><Link to="/admin">Admin</Link></li>
                         </ul>
                     </div>
 
                     <div className="footer-section">
                         <h4>Popular Packages</h4>
                         <ul className="footer-links">
-                            <li><a href="/#enquiry-form">Corbett Safari Only</a></li>
+                            <li><a href="/safari-booking">Corbett Safari Only</a></li>
                             <li><a href="/#enquiry-form">Nainital Sightseeing</a></li>
                             <li><a href="/#enquiry-form">Corbett + Nainital Combo</a></li>
                             <li><a href="/#enquiry-form">Custom Packages</a></li>
@@ -58,6 +59,8 @@ const Footer = () => {
                         <a href="#">Terms of Service</a>
                         <span>•</span>
                         <a href="#">Cancellation Policy</a>
+                        <span>•</span>
+                        <Link to="/admin" className="admin-link">Admin</Link>
                     </div>
                 </div>
             </div>
