@@ -79,14 +79,6 @@ const Hero = () => {
                 ))}
             </div>
 
-            {/* Navigation Arrows */}
-            <button className="hero-nav hero-nav-prev" onClick={prevSlide} aria-label="Previous slide">
-                ‹
-            </button>
-            <button className="hero-nav hero-nav-next" onClick={nextSlide} aria-label="Next slide">
-                ›
-            </button>
-
             {/* Main Content with Form */}
             <div className="hero-content-wrapper">
                 <div className="hero-container">
