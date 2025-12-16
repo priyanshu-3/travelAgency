@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import CorbettHighlights from '../components/CorbettHighlights';
 import NainitalHighlights from '../components/NainitalHighlights';
 import WhyBookWithUs from '../components/WhyBookWithUs';
+import WhatsAppButton from '../components/WhatsAppButton';
 import Footer from '../components/Footer';
 import './HomePage.css';
 
@@ -47,6 +48,7 @@ function HomePage() {
                         </Link>
                         <nav className="main-nav">
                             <Link to="/" className="nav-link active">Home</Link>
+                            <Link to="/packages" className="nav-link">Packages</Link>
                             <Link to="/itinerary" className="nav-link">Itinerary</Link>
                             <Link to="/safari-booking" className="nav-link">Safari Booking</Link>
                             <button onClick={scrollToForm} className="btn btn-primary">Book Now</button>
@@ -64,6 +66,8 @@ function HomePage() {
                     <WhyBookWithUs />
                 </div>
             </div>
+
+            <WhatsAppButton />
 
             <Footer />
         </>

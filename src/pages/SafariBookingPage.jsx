@@ -106,6 +106,7 @@ function SafariBookingPage() {
                         </Link>
                         <nav className="main-nav">
                             <Link to="/" className="nav-link">Home</Link>
+                            <Link to="/packages" className="nav-link">Packages</Link>
                             <Link to="/itinerary" className="nav-link">Itinerary</Link>
                             <Link to="/safari-booking" className="nav-link active">Safari Booking</Link>
                         </nav>
